@@ -48,20 +48,11 @@ Required packages:
 - Seaborn
 
 ### Reflection
-To summarize this project, I built a Random Forest classifier to predicts customer churn based on event log and user data.
+To summarize this project, I built a Random Forest classifier to predict customer churn based on event log and user data.
 I recoded multiple variables related to event logs into new frequency variables per user, to be able to restructure the 
-model input data to one row per unique user instead of one row per event. I only used the most recent event row per user to get
-the most updated data. We turned categorical columns into indices, one hot encoded them to separate numerical binary columns, scaled all 
-numerical features using MinMaxScaler, and transformed all input features to one single vector to use in modeling. We tested
-various classifiers as baseline models without any hyperparameter tuning, selected the best performing baseline model, which
-was a Random Forest classifier, and tuned its hyperparameters to improve its performance. Finally, we explored how to explain
-the model by looking at feature importances and their predictive power.
+model input data to one row per unique user instead of one row per event. I only used the most recent event row per user to get the most updated data. We turned categorical columns into indices, one hot encoded them to separate numerical binary columns, scaled all numerical features using MinMaxScaler, and transformed all input features to one single vector to use in modeling. We tested various classifiers as baseline models without any hyperparameter tuning, selected the best performing baseline model, which was a Random Forest classifier, and tuned its hyperparameters to improve its performance. Finally, we explored how to explain the model by looking at feature importances and their predictive power.
 
-This project was challenging and fun because I have never used Apache Spark previously, the code and functions are different, and
-it was very useful to learn how to work with analytics and machine learning in a big data setting. Debugging was a bit challenging
-because the error messages are hard to interpret in Spark, and it took me a while to figure out why I could not join the tables
-where I had recoded new variables to the dataset. I figured out after much debugging that it was most likely due to not caching the dataframes before joining them,
-and that some variables had missing data in them that messed up the join function.
+This project was challenging and fun because I have never used Apache Spark previously, the code and functions are different, and it was very useful to learn how to work with analytics and machine learning in a big data setting. Debugging was a bit challenging because the error messages are hard to interpret in Spark, and it took me a while to figure out why I could not join the tables where I had recoded new variables to the dataset. I figured out after much debugging that it was most likely due to not caching the dataframes before joining them, and that some variables had missing data in them that messed up the join function.
 
 ### Acknowledgements
 The *'medium-sparkify-event-data.json'* dataset has been provided by [Udacity](https://www.udacity.com/).
