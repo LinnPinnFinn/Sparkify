@@ -40,7 +40,7 @@ Reguired installations:
 - Python 3.6.7
 
 Required packages:
-- Pyspark 2.4.4 (Pyspark.sql and Pyspark.ml)
+- PySpark 2.4.4 (PySpark.sql and PySpark.ml)
 - NumPy
 - Pandas
 - Datetime
